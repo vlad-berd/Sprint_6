@@ -42,7 +42,7 @@ class OrderPage(BasePage):
         self.click_on_element(OrderPageLocators.rental_period(period))
 
     @allure.step("Выбрать цвет самоката")
-    def select_scooter_color_black(self, color):
+    def select_scooter_color(self, color):
         self.click_on_element(OrderPageLocators.scooter_color(color))
 
     @allure.step("Написать комментарий")

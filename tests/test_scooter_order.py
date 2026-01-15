@@ -20,7 +20,7 @@ class TestScooterOrderForm:
         order_page.click_on_button_next()
         order_page.select_date_day()
         order_page.select_rental_period(user["rental_period"])
-        order_page.select_scooter_color_black(user["color_scooter"])
+        order_page.select_scooter_color(user["color_scooter"])
         order_page.write_comment(user["comment"])
         order_page.click_on_button_order()
         order_page.click_on_button_confirm_order()
