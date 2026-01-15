@@ -17,7 +17,7 @@ class DataOrderPage:
         "id1": {
                 "name": "Иван",
                 "surname": "Иванов",
-                "addres": "Померанцев переулок, 6с1",
+                "address": "Померанцев переулок, 6с1",
                 "station": "Лихоборы",
                 "phone_number": "+79998887766",
                 "rental_period": "сутки",
@@ -27,7 +27,7 @@ class DataOrderPage:
         "id2": {
                 "name": "Александр",
                 "surname": "Пушкин",
-                "addres": "Мясницкая улица, 3",
+                "address": "Мясницкая улица, 3",
                 "station": "Лубянка",
                 "phone_number": "89998887766",
                 "rental_period": "семеро суток",

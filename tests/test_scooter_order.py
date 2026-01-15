@@ -18,7 +18,7 @@ class TestScooterOrderForm:
 
         order_page.fill_field_name(user["name"])
         order_page.fill_field_surname(user["surname"])
-        order_page.fill_field_address(user["addres"])
+        order_page.fill_field_address(user["address"])
         order_page.select_station(user["station"])
         order_page.fill_field_telephone(user["phone_number"])
         order_page.click_on_button_next()
