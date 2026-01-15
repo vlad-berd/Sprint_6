@@ -1,5 +1,6 @@
 import allure
 
+from pages.main_page import MainPage
 from pages.order_page import OrderPage
 from data import DataOrderPage
 
@@ -7,8 +8,11 @@ from data import DataOrderPage
 class TestScooterOrderForm:
     @allure.title("Проверка успешного оформления заказа самоката для пользователя {user[name]} {user[surname]} ")
     @allure.description("Переходим по кнопке 'Заказать' на страницу оформления заказа самоката. Заполняем форму и проверяем сообщение об успешном создании заказа")
-    def test_order_scooter_after_click_order_button_success(self, order_page_driver, user):
-        order_page = OrderPage(order_page_driver)
+    def test_order_scooter_after_click_order_button_success(self, driver, user):
+        main_page = MainPage(driver)
+        main_page.click_on_cookie_confirm_button()
+        main_page.click_on_top_order_button()
+        order_page = OrderPage(driver)
 
         allure.dynamic.parameter("Полное имя", f"{user["name"]} {user["surname"]}", excluded=True)
 

@@ -3,7 +3,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from curl import *
-from pages.main_page import MainPage
 from data import DataOrderPage
 
 
@@ -16,14 +15,6 @@ def driver():
     browser.get(BASE_URL)
     yield browser
     browser.quit()
-
-@pytest.fixture
-def order_page_driver(driver):
-    main_page = MainPage(driver)
-    main_page.click_on_cookie_confirm_button()
-    main_page.click_on_top_order_button()
-
-    return driver
 
 USERS = DataOrderPage.users
 
